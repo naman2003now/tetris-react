@@ -1,0 +1,8 @@
+.nextPiece {
+  width: 100%;
+  height: 35%;
+
+  border-color: #928374;
+  border-width: 2px;
+  border-style: solid;
+}

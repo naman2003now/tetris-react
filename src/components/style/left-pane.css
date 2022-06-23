@@ -1,0 +1,17 @@
+.hold {
+  width: 100%;
+  height: 25%;
+
+  border-color: #928374;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.score {
+  width: 100%;
+  height: 45%;
+
+  border-color: #928374;
+  border-width: 2px;
+  border-style: solid;
+}

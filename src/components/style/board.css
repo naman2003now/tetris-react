@@ -1,0 +1,13 @@
+.board {
+  width: 39.583333%;
+  height: 95%;
+
+  margin: 2.5%;
+
+  border-color: #928374;
+  border-width: 2px;
+  border-style: solid;
+
+  display: flex;
+  flex-wrap: wrap;
+}
