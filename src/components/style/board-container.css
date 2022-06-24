@@ -1,5 +1,5 @@
 .boardContainer {
-  background-color: #282828;
+  background-color: var(--bg-color);
 
   height: 90vmin;
   width: 90vmin;

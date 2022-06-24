@@ -29,8 +29,8 @@
 .piece-container-board {
   display: flex;
 
+  flex-direction: column;
   flex-wrap: wrap;
-
   width: 100%;
   aspect-ratio: 5/5;
 }

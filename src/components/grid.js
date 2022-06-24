@@ -1,4 +1,4 @@
-// const blue = "#458588";
+import { useState } from "react";
 
 const colors = [
   "#cc241d",
@@ -10,7 +10,8 @@ const colors = [
   "#d65d0e",
 ];
 
-function createGrid(width, height) {
+function createGrid(width, height, cell_colors) {
+  console.log(cell_colors);
   let grid = [];
   for (let i = 0; i < width; i++) {
     for (let j = 0; j < height; j++) {
@@ -18,9 +19,10 @@ function createGrid(width, height) {
         <div
           className="cell"
           id={"" + i + "," + j + ""}
-          key={width * j + i}
+          key={width * i + j}
           style={{
-            backgroundColor: colors[Math.floor(7 * Math.random())],
+            backgroundColor:
+              cell_colors[i][j] === -1 ? undefined : colors[cell_colors[i][j]],
             width: `calc(100% / ${width})`,
             height: `calc(100% / ${height})`,
           }}
@@ -32,7 +34,17 @@ function createGrid(width, height) {
 }
 
 function Grid(props) {
-  return <>{createGrid(props.width, props.height)}</>;
+  let final_grid = [];
+  for (let i = 0; i < props.width; i++) {
+    let temp_grid = [];
+    for (let j = 0; j < props.height; j++) {
+      temp_grid.push(-1);
+    }
+    final_grid.push(temp_grid);
+  }
+  const [grid, setGrid] = useState(final_grid);
+  props.setter(setGrid);
+  return <>{createGrid(props.width, props.height, grid)}</>;
 }
 
 export default Grid;

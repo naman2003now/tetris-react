@@ -11,6 +11,7 @@ body {
   align-items: center;
 
   --fg-color: #ebdbb2;
+  --bg-color: #1d2021;
 }
 
 code {
