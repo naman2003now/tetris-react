@@ -1,0 +1,36 @@
+.hold {
+  width: 100%;
+  height: 30%;
+
+  color: var(--fg-color);
+
+  border-color: var(--fg-color);
+  border-width: 2px;
+  border-style: solid;
+
+  font-family: "Press Start 2P", cursive;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.hold-label {
+  color: var(--fg-color);
+  font-size: 2vmin;
+  font-family: "press start 2p", cursive;
+
+  margin: 0;
+
+  width: 100%;
+}
+
+.hold-board {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  width: 100%;
+  aspect-ratio: 5/5;
+}

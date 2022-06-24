@@ -20,7 +20,7 @@ function createGrid(width, height) {
           id={"" + i + "," + j + ""}
           key={width * j + i}
           style={{
-            backgroundColor: colors[Math.floor(7*Math.random())],
+            backgroundColor: colors[Math.floor(7 * Math.random())],
             width: `calc(100% / ${width})`,
             height: `calc(100% / ${height})`,
           }}
@@ -31,4 +31,8 @@ function createGrid(width, height) {
   return grid;
 }
 
-export default createGrid;
+function Grid(props) {
+  return <>{createGrid(props.width, props.height)}</>;
+}
+
+export default Grid;
