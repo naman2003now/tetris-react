@@ -20,8 +20,8 @@ function createGrid(width, height) {
           id={"" + i + "," + j + ""}
           key={width * j + i}
           style={{
-            backgroundColor: colors[(width * j + i) % 7],
-            width: `calc(100% / ${width})` ,
+            backgroundColor: colors[Math.floor(7*Math.random())],
+            width: `calc(100% / ${width})`,
             height: `calc(100% / ${height})`,
           }}
         ></div>
