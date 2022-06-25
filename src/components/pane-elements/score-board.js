@@ -6,7 +6,6 @@ import {
 } from "../../game/setters.js";
 
 import { useState } from "react";
-import "../../game/game.js";
 
 function ScoreBoard() {
   const [score, setScore] = useState("000000000");

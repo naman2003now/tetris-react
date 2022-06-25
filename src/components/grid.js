@@ -11,7 +11,6 @@ const colors = [
 ];
 
 function createGrid(width, height, cell_colors) {
-  console.log(cell_colors);
   let grid = [];
   for (let i = 0; i < width; i++) {
     for (let j = 0; j < height; j++) {

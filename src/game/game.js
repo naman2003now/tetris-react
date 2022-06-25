@@ -1,4 +1,5 @@
-import { setScore, setBoard } from "./setters.js";
+import { setScore, setBoard, setLevel } from "./setters.js";
+import { gameloop, down } from "./event-handler.js";
 
 let score = 0;
 
@@ -15,8 +16,14 @@ function board(score) {
   return grid;
 }
 
-setInterval(() => {
-  score += 1;
+gameloop(() => {
+	score+=1;
   setScore(score);
   setBoard(board(score));
-}, 1000);
+});
+
+down(() => {
+  score += 1;
+  setLevel(score);
+  setBoard(board(score));
+});
